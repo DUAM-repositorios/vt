@@ -291,7 +291,7 @@ if st.session_state.get('prompt_generated_success', False):
                     # Insertar datos
                     # Usar placeholders (?) para prevenir inyección SQL
                     placeholders = ", ".join(["?"] * len(CSV_EXPECTED_COLUMNS))
-                    insert_sql = f"INSERT INTO \"{table_name_db}\" ({', '.join([f'"{col}"' for col in CSV_EXPECTED_COLUMNS])}) VALUES ({placeholders})"
+                    insert_sql = f'INSERT INTO "{table_name_db}" ({", ".join([f\'"{col}"\' for col in CSV_EXPECTED_COLUMNS])}) VALUES ({placeholders})'
                     
                     insert_count = 0
                     for _, row in st.session_state.parsed_dataframe.iterrows():
