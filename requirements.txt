@@ -2,4 +2,5 @@ fastapi
 uvicorn
 python-dotenv
 sqlalchemy
-psycopg2
+psycopg2-binary==2.9.10
+streamlit
